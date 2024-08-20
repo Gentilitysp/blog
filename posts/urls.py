@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),  # Handle the root URL
-    # path('<str:page>/', views.dynamic_page, name='dynamic_page'),
+    path('<str:page>/', views.dynamic_page, name='dynamic_page'),
 ]
 
     

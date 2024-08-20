@@ -5,12 +5,12 @@ from django.http import HttpResponseNotFound
 def index(request):
     return render(request, 'index.html')
 
-# def dynamic_page(request, page):
-#     template_name = f'{page}.html'
-#     try:
-#         return render(request, template_name)
-#     except TemplateDoesNotExist:
-#         return HttpResponseNotFound(f'Page {page} not found.')
+def dynamic_page(request, page):
+    template_name = f'{page}.html'
+    try:
+        return render(request, template_name)
+    except TemplateDoesNotExist:
+        return HttpResponseNotFound(f'Page {page} not found.')
 
 
 # Create your views here.
